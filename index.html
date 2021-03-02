@@ -76,11 +76,12 @@
             var dayage=Math.floor((diff%31536000000)/86400000);
             var month=Math.floor(dayage/30);
             var day=dayage%30;
-            var sec=Math.floor(((diff%31536000000)%86400000)/1000);
+            var min=Math.floor(((diff%31536000000)%86400000)/60000)
+            var sec=Math.floor((((diff%31536000000)%86400000)%60000)/1000);
             var millisec=(((diff%31536000000)%86400000)%1000);
 
              
-            document.getElementById("age").innerHTML="Your age is "+year+"Years "+month+"Months "+day+"Days "+sec+"Seconds "+millisec+"Milliseconds";
+            document.getElementById("age").innerHTML="Your age is "+year+"Years "+month+"Months "+day+"Days "+min+"Minutes "+sec+"Seconds "+millisec+"Milliseconds";
         }
 
         }
